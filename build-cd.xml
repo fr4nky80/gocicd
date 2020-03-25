@@ -1,0 +1,15 @@
+<project name="example-cd" default="init" basedir=".">
+  <description>
+    Example CI
+  </description>
+  <!-- set global properties for this build -->
+  <property name="zip-path" location="bin\zip\"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    
+  </target>
+
+</project>
