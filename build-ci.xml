@@ -3,7 +3,7 @@
     Example CI
   </description>
   <!-- set global properties for this build -->
-  <property name="release-path" location="bin\Release\"/>
+  <property name="release-path" location="bin\Release\netcoreapp3.1"/>
   <property name="zip-path" location="bin\zip\"/>
 
   <target name="init">
