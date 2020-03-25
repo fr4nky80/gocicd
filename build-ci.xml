@@ -8,9 +8,13 @@
 
   <target name="init">
     <!-- Create the time stamp -->
-    <tstamp/>
+    <tstamp>
+      <format property="TODAY_GB" pattern="ddMMyyyyHHmmss" locale="en,GB"/>
+    </tstamp>
     <!-- Create the build directory structure used by compile -->
-    <zip destfile="${zip-path}/example-ci.zip" basedir="${release-path}"/>
+    <zip destfile="E:\curso\go-cicd\artifacts\example-ci-${TODAY_GB}.zip" basedir="${release-path}"/>
   </target>
+
+  
 
 </project>
