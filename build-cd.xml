@@ -1,15 +1,19 @@
 <project name="example-cd" default="init" basedir=".">
   <description>
-    Example CI
+    Example CD
   </description>
-  <!-- set global properties for this build -->
-  <property name="zip-path" location="bin\zip\"/>
+
+  <path id="last-zip">
+  <last>
+    <sort>
+      <fileset dir="E:\curso\go-cicd\artifacts" includes="**/example-ci-*.zip"/>
+    </sort>
+  </last>
+ </path>
 
   <target name="init">
-    <!-- Create the time stamp -->
-    <tstamp/>
-    <!-- Create the build directory structure used by compile -->
-    
+    <echo>$${last-zip} => ${toString:last-zip}</echo>  
+    <unzip src="${toString:last-zip}" ="E:\curso\go-cicd\deploys\example" />
   </target>
 
 </project>
