@@ -2,7 +2,9 @@
   <description>
     Example CD
   </description>
-
+  <property name="release-path" location="E:\curso\go-cicd\deploys\example"/>
+  <property name="zip-path" location="${release_path}\tmp"/>
+  
   <path id="last-zip">
   <last>
     <sort>
@@ -12,8 +14,16 @@
  </path>
 
   <target name="init">
+
     <echo>$${last-zip} => ${toString:last-zip}</echo>  
+    
+    <rename src="${release-path}\app_offline.md" dest="${release-path}\app_offline.html"/>
+
     <unzip src="${toString:last-zip}" dest="E:\curso\go-cicd\deploys\example" />
+
+    <delete>
+      <fileset dir="${release-path}" includes="app_offline.html"/>
+    </delete>
   </target>
 
 </project>
