@@ -35,5 +35,11 @@ namespace gocicd.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("hello/{name}")]
+        public IActionResult Get(string name)
+        {
+            return Ok($"Hola {name}");
+        }
     }
 }
