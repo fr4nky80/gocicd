@@ -41,5 +41,12 @@ namespace gocicd.Controllers
         {
             return Ok($"Hola {name}!!!");
         }
+
+
+        [HttpGet("hello2/{name}")]
+        public IActionResult GetHello2(string name)
+        {
+            return Ok($"Hola {name}, esto es lo mas facil!!!");
+        }
     }
 }
