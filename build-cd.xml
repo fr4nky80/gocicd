@@ -19,6 +19,8 @@
     
     <rename src="${release-path}\app_offline.md" dest="${release-path}\app_offline.htm"/>
 
+    <sleep seconds="5"/>
+
     <unzip src="${toString:last-zip}" dest="E:\curso\go-cicd\deploys\example" />
 
     <delete>
