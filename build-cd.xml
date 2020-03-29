@@ -17,12 +17,12 @@
 
     <echo>$${last-zip} => ${toString:last-zip}</echo>  
     
-    <rename src="${release-path}\app_offline.md" dest="${release-path}\app_offline.html"/>
+    <rename src="${release-path}\app_offline.md" dest="${release-path}\app_offline.htm"/>
 
     <unzip src="${toString:last-zip}" dest="E:\curso\go-cicd\deploys\example" />
 
     <delete>
-      <fileset dir="${release-path}" includes="app_offline.html"/>
+      <fileset dir="${release-path}" includes="app_offline.htm"/>
     </delete>
   </target>
 
